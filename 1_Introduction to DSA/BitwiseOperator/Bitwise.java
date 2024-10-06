@@ -27,6 +27,16 @@ public static void main(String[] args){
             num = num >> 1; // Right shift num to check the next bit
         }
         System.out.println("Number of 1 bits: " + result);
+    // ----------------------- --- -----------------Second Approach------------------------------------------------
+        System.out.print("Enter the integer :");
+        Scanner Scanner = new Scanner(System.in);
+        int num = Scanner.nextInt();
+        int count = 0; // This will hold the count of '1' bits
+        for(int i = 31; i >= 0; i--){
+            if(((num >> i) & 1) == 1) // Right shift num to check the next bit And Get the last bit of num
+                count++; // If the last bit is 1, increment the count
+        }
+        System.out.println("Number of 1 bits: " + count);
     }
 
 
